@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Vegetarian</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- ================= Nav-Bar Start ================ -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="./images/logo.png" alt="" width="160px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./product.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="btn-box ms-lg-5">
+            <button class="primary-btn">Book Table</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- ================= Nav-Bar End ================ -->
+    <!-- ================= Header Start ================ -->
+    <header class="header">
+      <div class="container h-100">
+        <div
+          class="header-content d-flex flex-column justify-content-center align-items-center h-100"
+        >
+          <h1 class="text-center">Our Products</h1>
+          <p class="text-center">
+            We provide various types of food products, and all our products are
+            healthy.
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- ================= Header End ================ -->
+    <!-- ================= Search bar Start ================ -->
+    <section class="pt-5 pb-2">
+      <div class="container">
+        <div class="d-flex">
+          <input
+            class="form-control search-input"
+            type="search"
+            placeholder="Search"
+            id="searchInput"
+          />
+          <button class="primary-btn py-2 px-4" id="searchBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              id="search"
+              width="20"
+            >
+              <path
+                d="M3.624,15a8.03,8.03,0,0,0,10.619.659l5.318,5.318a1,1,0,0,0,1.414-1.414l-5.318-5.318A8.04,8.04,0,0,0,3.624,3.624,8.042,8.042,0,0,0,3.624,15Zm1.414-9.96a6.043,6.043,0,1,1-1.77,4.274A6,6,0,0,1,5.038,5.038Z"
+                fill="#ffffff"
+                class="color000000 svgShape"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ================= Search bar End ================ -->
+    <!-- ================= Spiner Start ================ -->
+    <section class="spiner-sec text-center pt-3">
+      <div class="container">
+        <h2 class="text-center pb-5 title">Letest Foods</h2>
+        <div class="spinner-grow text-success" width="3rem" id="spinner">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </section>
+    <!-- ================= Spiner End ================ -->
+    <!-- ================= Products Start ================ -->
+    <section class="pt-3 pb-5 product-sec text-center">
+      <div class="container">
+        <div class="alert alert-danger d-none" id="alert" role="alert">
+          <h5>No Data Found! Please modify your search keyword</h5>
+        </div>
+        <div class="row products" id="products"></div>
+        <button class="primary-btn py-2 px-5 mt-3 d-none" id="moreFood">
+          More Food
+        </button>
+      </div>
+    </section>
+    <!-- ================= Products End ================ -->
+    <!-- ================= Top Scroll Start ================ -->
+    <div class="top-scroll d-inline-block" id="topScroll">
+      <button class="primary-btn p-2 rounded-circle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          id="TopArrow"
+          width="22"
+        >
+          <g fill="#ffffff" class="color000000 svgShape">
+            <polygon
+              points="256 217.463 403.785 365.248 439.141 329.893 256 146.752 72.859 329.893 108.215 365.248 256 217.463"
+              fill="#ffffff"
+              class="color000000 svgShape"
+            ></polygon>
+          </g>
+        </svg>
+      </button>
+    </div>
+    <!-- ================= Top Scroll End ================ -->
+    <!-- ================= Modal Start ================ -->
+    <div class="modal-container shadow p-4 rounded" id="modal"></div>
+    <!-- ================= Modal End ================ -->
+
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

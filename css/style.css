@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Kavoon&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: rgb(36, 183, 34);
+  --light-green-color: #d3fce1;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --kavoon-font: "Kavoon", sans-serif;
+  --montserrat-font: "Montserrat", sans-serif;
+}
+body {
+  font-family: var(--montserrat-font);
+  position: relative;
+}
+
+.primary-btn {
+  border: 0;
+  outline: 0;
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-family: var(--kavoon-font);
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* =============== Navbar Styling Start ============= */
+.navbar {
+  background: var(--light-green-color);
+}
+.nav-item .nav-link {
+  font-family: var(--kavoon-font);
+  font-size: 1rem;
+  color: var(--black-color);
+}
+.nav-item .nav-link:hover {
+  color: var(--black-color);
+}
+.navbar-collapse .btn-box button {
+  padding: 0.5rem 1.2rem;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+/* =============== Navbar Styling End ============= */
+/* =============== Header Styling Start ============= */
+.header {
+  height: 400px;
+  background: linear-gradient(rgba(36, 183, 34, 0.04), rgba(36, 183, 34, 0.04)),
+    url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header-content h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  font-family: var(--kavoon-font);
+  color: var(--black-color);
+  text-shadow: 1px 1px 1px #000;
+}
+.header-content p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black-color);
+}
+/* =============== Header Styling End ============= */
+/* =============== Spiner && Search Bar Styling Start ============= */
+.spiner-sec .title {
+  font-size: 2.2rem;
+  font-family: var(--kavoon-font);
+  color: var(--black-color);
+}
+.spiner-sec .title::after {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--primary-color);
+  margin: 0 auto;
+}
+.search-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.search-input + button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/* =============== Spiner && Search Bar Styling End ============= */
+/* =============== Products Styling Start ============= */
+.product-sec {
+  margin-top: 3rem;
+}
+
+.p-item {
+  margin: 4rem 0;
+}
+.p-item .img-box {
+  width: 200px;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+.p-item .img-box img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-top: -80px;
+}
+.product-content h2 {
+  font-size: 1.3rem;
+  font-family: var(--kavoon-font);
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.5rem 0;
+}
+.product-content p {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+.info-box {
+  border-top: 1px solid #ebebeb;
+}
+.info-box .price span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.info-box button {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.3rem 1.5rem;
+}
+/* =============== Products Styling End ============= */
+/* =============== Top Scroll Styling Start ============= */
+.top-scroll {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+/* =============== Top Scroll Styling End ============= */
+/* =============== Modal Styling Start ============= */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+.modal-container .card {
+  max-width: 600px;
+  min-width: 300px;
+  background: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card .card-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.modal-container .product-info p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: var(--kavoon-font);
+}
+.modal-container .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.modal-container .card-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.cross-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+/* =============== Modal Styling End ============= */
+
+@media (max-width: 670px) {
+  .header-content h1 {
+    font-size: 3rem;
+  }
+  .spiner-sec .title {
+    font-size: 1.7rem;
+  }
+  .spiner-sec .title::after {
+    width: 180px;
+  }
+}
